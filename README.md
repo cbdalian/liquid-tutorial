@@ -10,6 +10,8 @@ start services
 pegin from bitcoin into liquid
 =================================
 
+環境準備
+---------------------------------
     # liquid-cli getnewaddress
     CTEr64MwkHNni2LzsDe2W5sVet25rBqVWSSjYF1kCA4cW6HtxigdkMxKegKWRFt9wA7uuMRpJouFrmxE
 
@@ -39,3 +41,21 @@ pegin from bitcoin into liquid
       "address": "XNfjdteaKBeGGDzreW4xuQFYnRbFita4s8",
       "redeemScript": "51210208bcf93c48d7d590257e94cbbf6c85c565c7e98f8126e7418e71f53f0de3a97d51ae"
     }
+
+    # remove the folder
+    rm -Rf ~/.bitcoin/liquidregtest/
+    exit
+    
+    # modify docker-compose to revoke pegin to server liquid node
+    vi docker-compose.yml
+        /root/liquid/bin/liquidd &&
+        ↓
+        /root/liquid/bin/liquidd -signblockscript=51210208bcf93c48d7d590257e94cbbf6c85c565c7e98f8126e7418e71f53f0de3a97d51ae -fedpegscript=51210208bcf93c48d7d590257e94cbbf6c85c565c7e98f8126e7418e71f53f0de3a97d51ae &&
+    exit
+    
+    # restart 
+    docker-compose stop
+    docker-compose up
+    
+    
+    
