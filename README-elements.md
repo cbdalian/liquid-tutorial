@@ -1,5 +1,5 @@
 # pegin into elements 
 
 
-bitcoind
-ele
+  `bitcoind
+  elementsd`
