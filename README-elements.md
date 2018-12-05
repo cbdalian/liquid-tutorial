@@ -30,7 +30,6 @@
     #addnode=
 
   cat elements.conf
-  
     rpcuser=username
     rpcpassword=password
     rpcport=8339
