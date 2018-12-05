@@ -30,7 +30,7 @@
     #addnode=
 
   cat elements.conf
-    rpcuser=username
+    `rpcuser=username
     rpcpassword=password
     rpcport=8339
     daemon=1
@@ -42,7 +42,7 @@
     mainchainrpcuser=username
     mainchainrpcpassword=password
     validatepegin=1
-    txindex=1
+    txindex=1`
   
   # start services
   bitcoind
