@@ -256,7 +256,7 @@
     $ bitcoin-cli getbalance
     50.00000000
     
-    $ bitcoin-cli -regtest sendtoaddress "2Mzkg7kHhSG2c9jFzkgRTN4MNYKaEr9N8ye" 1
+    $ bitcoin-cli sendtoaddress "2Mzkg7kHhSG2c9jFzkgRTN4MNYKaEr9N8ye" 1
     65ff95c0e710e7f0799793c1fdae3091586fc0eecc95b2442050e75549ec1b6a
     
     # in order to get coin pegged, it is neccesary to run claimpegin
