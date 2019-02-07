@@ -1,0 +1,31 @@
+ubuntu 18.04 build
+====================
+Some notes on how to build Liquid in Ubuntu 18.04.
+
+  sudo apt-get update
+	sudo apt-get upgrade
+
+
+cd ~
+mkdir work
+git clone https://github.com/Blockstream/liquid.git
+cd liquid/
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+# install all boost development packages
+sudo apt-get install libboost-all-dev
+
+# install BerkeleyDB
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
+# install Qt5
+sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
+sudo apt-get install libqrencode-dev
+
+# build liquid
+./autogen.sh
+./configure
+make
+make install # optional
