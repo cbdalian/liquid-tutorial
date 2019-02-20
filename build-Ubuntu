@@ -41,7 +41,6 @@ git lfs install
 
 # install node(yarn)
 sudo apt install nodejs
-mkdir -p ~/.nodebrew/src
 
 # install protoc 3.5
 # Make sure you grab the latest version
