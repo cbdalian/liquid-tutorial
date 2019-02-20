@@ -30,3 +30,34 @@ sudo apt-get install libqrencode-dev
 ./configure
 make
 make install # optional
+
+
+### compile settlenet on ubuntu
+
+# install git-lfs
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+git lfs install
+
+# install node(yarn)
+sudo apt install nodejs
+mkdir -p ~/.nodebrew/src
+
+# install protoc 3.5
+# Make sure you grab the latest version
+curl -OL https://github.com/google/protobuf/releases/download/v3.5.1/protoc-3.5.1-linux-x86_64.zip
+
+# Unzip
+unzip protoc-3.5.1-linux-x86_64.zip -d protoc3
+
+# Move protoc to /usr/local/bin/
+sudo mv protoc3/bin/* /usr/local/bin/
+
+# Move protoc3/include to /usr/local/include/
+sudo mv protoc3/include/* /usr/local/include/
+
+# Optional: change owner
+sudo chown $USER /usr/local/bin/protoc
+sudo chown -R $USER /usr/local/include/google
+
+
