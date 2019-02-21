@@ -1,5 +1,13 @@
 ### compile settlenet on ubuntu
 
+# add go bin to envirement
+vi ~/.bashrc
+====================================
+export GOPATH=/home/ubuntu
+export PATH="/usr/lib/go-1.10/bin:$GOPATH/bin:$PATH"
+====================================
+. .bashrc
+
 # install git-lfs
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
