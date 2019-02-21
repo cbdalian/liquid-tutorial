@@ -81,4 +81,22 @@ sudo usermod -g docker ubuntu
 sudo /bin/systemctl restart docker.service
 docker version
 
-# 
+# clone stleam
+git clone git@github.com:cryptogarageinc/stleam.git
+cd stleam
+make checkout
+go get -u github.com/golang/dep/cmd/dep
+make dev
+make deps
+make pb
+
+cd [folder]
+go build
+
+
+
+
+
+
+
+
