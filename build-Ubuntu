@@ -93,8 +93,11 @@ make pb
 cd [folder]
 go build
 
+# create db
+docker-compose up -d
 
-
+# start process
+./authorizer -e development
 
 
 
