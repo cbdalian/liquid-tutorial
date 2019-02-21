@@ -80,6 +80,7 @@ sudo apt-get install -y docker-ce
 sudo usermod -g docker ubuntu
 sudo /bin/systemctl restart docker.service
 docker version
+sudo apt install docker-compose
 
 # clone stleam
 git clone git@github.com:cryptogarageinc/stleam.git
